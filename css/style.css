@@ -299,6 +299,50 @@ footer {
     background-color: #ff1a1a;
 }
 
+/* 黑色主题样式 */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-theme header {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+body.dark-theme .content {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-theme .markdown-body {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-theme .article-sidebar {
+    background-color: #1f1f1f;
+    border-right: 1px solid #333;
+}
+
+body.dark-theme nav ul li a {
+    color: #e0e0e0;
+}
+
+body.dark-theme nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-theme .download-item {
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+}
+
+body.dark-theme .modal-content {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
 /* 响应式设计 */
 @media (max-width: 768px) {
     .header-content {

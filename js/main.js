@@ -266,3 +266,18 @@ window.addEventListener('click', function (event) {
 document.addEventListener("DOMContentLoaded", () => {
     loadArticleList();
 });
+
+// 切换主题功能
+const themeToggleButton = document.getElementById('theme-toggle');
+
+// 监听键盘快捷键（例如双击 "T" 键）
+document.addEventListener('keydown', (event) => {
+    if (event.key.toLowerCase() === 't') {
+        document.body.classList.toggle('dark-theme');
+    }
+});
+
+// 监听按钮点击事件（备用）
+themeToggleButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-theme');
+});
