@@ -1,0 +1,61 @@
+[
+    {
+        "filename": "GPU-Z",
+        "remark": "显示显卡信息的工具",
+        "links": {
+            "汉化版2.65.1": "https://gitee.com/caramb/cloud_drive/releases/download/GPU-Z/GPU-Z-cn.exe",
+            "英文版2.65.1": "https://gitee.com/caramb/cloud_drive/releases/download/GPU-Z/GPU-Z-en.exe",
+            "官方下载2.65.1": "https://us3-dl.techpowerup.com/files/Ay9CJ4iR5mq65iss98p9eQ/1746147568/GPU-Z.2.65.1.exe"
+        }
+    },
+    {
+        "filename": "nvflash",
+        "remark": "Nvidia显卡刷vBIOS工具，Win 11, 10, 8, 7 (32-bit & 64-bit)",
+        "links": {
+            "nvflash32": "https://gitee.com/caramb/cloud_drive/releases/download/nvflash/nvflash.exe",
+            "nvflash64": "https://gitee.com/caramb/cloud_drive/releases/download/nvflash/nvflash64.exe",
+            "官方下载32+64": "https://us3-dl.techpowerup.com/files/idyLOFF5RxqaDZTDldZ_7g/1746147680/nvflash_5.867.zip"
+        }
+    },
+    {
+        "filename": "AMDVBFlash",
+        "remark": "AMD显卡刷vBIOS工具",
+        "links": {
+            "官方下载5.0.567(win)": "https://us3-dl.techpowerup.com/files/reaInvSW7FoEwQY-T60qvA/1746148242/amdvbflash_win_5.0.567.zip",
+            "官方下载5.0.567(linux)": "https://us3-dl.techpowerup.com/files/4Im9wSK0BCHk4tToTOB4fg/1746148637/amdvbflash_linux_4.71.zip",
+            "非官方下载5.0.567(win)": "https://gitee.com/caramb/cloud_drive/releases/download/AMDVBFlash/amdvbflash_win_5.0.567.zip",
+            "非官方下载5.0.567(linux)": "https://us3-dl.techpowerup.com/files/4Im9wSK0BCHk4tToTOB4fg/1746148637/amdvbflash_linux_4.71.zip"
+        }
+    },
+    {
+        "filename": "HEU KMS Activator",
+        "remark": "Windows/Office激活工具",
+        "links": {
+            "官方下载61.1.0(github)": "https://github.com/zbezj/HEU_KMS_Activator/releases/download/61.1.0/HEU_KMS_Activator_v61.1.0.iso",
+            "非官方下载61.1.0": "https://gitee.com/caramb/cloud_drive/releases/download/HEU_KMS_Activator/HEU_KMS_Activator_v61.1.0.exe"
+        }
+    },
+    {
+        "filename": "v2free",
+        "remark": "vpn(需节点)",
+        "links": {
+            "download": "https://gitee.com/caramb/cloud_drive/releases/download/nvflash/nvflash.exe"
+        }
+    },
+    {
+        "filename": "Google Chrome",
+        "remark": "谷歌浏览器",
+        "links": {
+            "官方下载(win)": "https://dl.google.com/tag/s/appguid%3D%7B8A69D345-D564-463C-AFF1-A69D9E530F96%7D%26iid%3D%7B1EF43018-891D-8CBF-4E9D-F8CA24C3818F%7D%26lang%3Dzh-CN%26browser%3D5%26usagestats%3D1%26appname%3DGoogle%2520Chrome%26needsadmin%3Dprefers%26ap%3Dx64-statsdef_1%26installdataindex%3Dempty/update2/installers/ChromeSetup.exe",
+            "非官方下载(win)":"https://gitee.com/caramb/cloud_drive/releases/download/Google_Chrome/ChromeSetup.exe"
+        }
+    },
+    {
+        "filename": "gcg",
+        "remark": "网络代理工具（需投喂chrome）",
+        "links": {
+            "download": "https://lz.qaiu.top/parser?url=https://caramb.lanzout.com/iQODQ2v1vxod&pwd=1437"
+
+        }
+    }
+]

@@ -1,215 +1,84 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carambola1437的博客</title>
-    <!-- 引入Markdown解析库 -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #3498db;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.6;
-            color: var(--primary-color);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            display: grid;
-            grid-template-columns: 250px 1fr;
-            gap: 30px;
-        }
-
-        /* 侧边栏样式 */
-        .sidebar {
-            border-right: 1px solid #eee;
-            padding-right: 20px;
-        }
-
-        .author-info {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .avatar {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        .article-list {
-            list-style: none;
-        }
-
-        .article-item {
-            margin-bottom: 10px;
-        }
-
-        .article-link {
-            color: var(--primary-color);
-            text-decoration: none;
-            padding: 8px;
-            display: block;
-            border-radius: 4px;
-            transition: all 0.2s;
-        }
-
-        .article-link:hover {
-            background: #f5f5f5;
-            color: var(--secondary-color);
-        }
-
-        /* 文章内容样式 */
-        .article-content {
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-        }
-
-        /* Markdown渲染样式 */
-        .markdown-body {
-            font-size: 16px;
-        }
-
-        .markdown-body h1, 
-        .markdown-body h2 {
-            border-bottom: 1px solid #eee;
-            padding-bottom: 0.3em;
-            margin: 1em 0;
-        }
-
-        .markdown-body pre {
-            background: #f8f8f8;
-            padding: 16px;
-            border-radius: 6px;
-            overflow: auto;
-        }
-
-        .markdown-body code {
-            font-family: Monaco, Consolas, "Courier New", monospace;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                grid-template-columns: 1fr;
-            }
-            .sidebar {
-                border-right: none;
-                border-bottom: 1px solid #eee;
-                padding-bottom: 20px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
-<body>
-    <div class="container">
-        <aside class="sidebar">
-            <div class="author-info">
-                <img src="avatar.jpg" alt="头像" class="avatar">
-                <h1>Carambola1437</h1>
-                <p>技术爱好者 & 个人开发者</p>
-            </div>
-            <ul class="article-list" id="articleList"></ul>
-        </aside>
 
-        <main class="article-content">
-            <div id="articleContainer"></div>
-        </main>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo-avatar">
+                <img src="./avatar.jpg" alt="Carambola1437的头像" class="avatar" id="avatar">
+                <div class="logo">
+                    <a href="#">Carambola1437的博客</a>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-tab="articles">文章</a></li>
+                    <li><a href="#" class="nav-link" data-tab="downloads">程序下载</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="articles" class="tab-content active">
+            <div class="article-sidebar">
+                <input type="text" id="search-articles" placeholder="搜索文章..." />
+                <ul id="article-list">
+                    <!-- 文章列表通过 JavaScript 动态加载 -->
+                </ul>
+            </div>
+            <div class="markdown-body" id="article-content">
+                <div class="loader"></div>
+            </div>
+        </div>
+
+        <div id="downloads" class="tab-content">
+            <h2>软件下载</h2>
+            <p>以下软件程序可下载（Ctrl+F搜索）：</p>
+            <div class="download-list" id="download-list">
+                <div class="loader"></div>
+            </div>
+        </div>
     </div>
 
-    <script>
-        // 文章配置
-        const articles = [
-            { 
-                id: 'Home-Page',
-                title: '首页',
-                date: '2025-3-3',
-                file: 'articles/HomePage.md'
-            }
-        ];
+    <!-- 弹窗 -->
+    <div id="avatar-modal" class="modal">
+        <div class="modal-content">
+            <h3>选择跳转链接</h3>
+            <button onclick="window.open('https://github.com/Carambola1437', '_blank')">GitHub</button>
+            <button
+                onclick="window.open('https://carambola1437.fandom.com/zh/wiki/Carambola1437_Wiki', '_blank')">Fandom</button>
+            <button onclick="window.open('https://space.bilibili.com/3546372944955871', '_blank')">Bilibili</button>
+            <button
+                onclick="window.open('https://www.facebook.com/profile.php?id=61566452296554', '_blank')">Facebook</button>
+            <button onclick="window.open('https://www.youtube.com/@Carambola1437', '_blank')">YouTube</button>
+            <button onclick="window.open('https://qm.qq.com/q/fSvJMdZ1m0', '_blank')">QQ</button>
+            <button id="close-modal">取消</button>
+        </div>
+    </div>
 
-        // 初始化文章列表
-        function initArticleList() {
-            const listElement = document.getElementById('articleList');
-            
-            articles.forEach(article => {
-                const li = document.createElement('li');
-                li.className = 'article-item';
-                
-                const link = document.createElement('a');
-                link.className = 'article-link';
-                link.href = `#${article.id}`;
-                link.innerHTML = `
-                    <h3>${article.title}</h3>
-                    <time>${article.date}</time>
-                `;
-                
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    loadArticle(article.file);
-                    window.location.hash = article.id;
-                });
-                
-                li.appendChild(link);
-                listElement.appendChild(li);
-            });
-        }
+    <!-- 下载弹窗 -->
+    <div id="download-modal" class="modal">
+        <div class="modal-content">
+            <h3 id="download-title">选择下载</h3>
+            <div id="version-buttons">
+                <!-- 动态生成版本按钮 -->
+            </div>
+            <button id="close-download-modal">取消</button>
+        </div>
+    </div>
 
-        // 加载并渲染文章
-        async function loadArticle(filePath) {
-            try {
-                const response = await fetch(filePath);
-                const markdown = await response.text();
-                const htmlContent = marked.parse(markdown);
-                
-                document.getElementById('articleContainer').innerHTML = `
-                    <div class="markdown-body">${htmlContent}</div>
-                `;
-            } catch (error) {
-                console.error('加载文章失败:', error);
-                document.getElementById('articleContainer').innerHTML = `
-                    <p>文章加载失败，请稍后再试。</p>
-                `;
-            }
-        }
-
-        // 初始化
-        document.addEventListener('DOMContentLoaded', () => {
-            initArticleList();
-            
-            // 检查URL hash
-            if (window.location.hash) {
-                const articleId = window.location.hash.substring(1);
-                const article = articles.find(a => a.id === articleId);
-                if (article) loadArticle(article.file);
-            } else {
-                // 默认加载第一篇文章
-                if (articles.length > 0) {
-                    loadArticle(articles[0].file);
-                }
-            }
-        });
-
-        // 监听hash变化
-        window.addEventListener('hashchange', () => {
-            const articleId = window.location.hash.substring(1);
-            const article = articles.find(a => a.id === articleId);
-            if (article) loadArticle(article.file);
-        });
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
