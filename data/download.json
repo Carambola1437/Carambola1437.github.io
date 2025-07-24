@@ -50,6 +50,17 @@
         }
     },
     {
+        "filename": "mixly",
+        "remark": "mixly #code #tool",
+        "links": {
+            "官方git更新版(releases-Mixly_WIN1.0)": "https://gitee.com/mixlyplus/Mixly/releases/download/1.0/Mixly_WIN.7z",
+            "v2.0 win32-x64":"https://gitcode.com/Carambola1437/cmblogFile/releases/download/mixly/mixly2.0-win32-x64%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E7%89%88.7z",
+            "v3.0 win32-x64":"https://gitcode.com/Carambola1437/cmblogFile/releases/download/mixly/Mixly3.0-win32-x64%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E7%89%88.zip"
+
+        }
+
+    },
+    {
         "filename": "Lossless Scaling",
         "remark": "游戏分辨率缩放，插帧工具，俗称小黄鸭，拼好帧 #tool",
         "links": {
@@ -88,6 +99,29 @@
 
     },
     {
+        "filename": "mite坐标获取",
+        "remark": "获取我的世界mite坐标的工具 #tool",
+        "links": {
+            "月煮雪坐标获取v1.4": "https://yuezhuxue.github.io/mite/ga/dl/MITE%E5%9D%90%E6%A0%87%E8%8E%B7%E5%8F%96v1.4.zip",
+            "月煮雪坐标获取v1.0":"https://yuezhuxue.github.io/mite/ga/dl/MITE%E5%9D%90%E6%A0%87%E8%8E%B7%E5%8F%96v1.0.zip",
+            "caramb坐标获取工具v0.1(github,主程序单文件)":"https://github.com/Carambola1437/mite_position_geter/releases/download/v0.1/main.exe",
+            "caramb坐标获取工具v0.1(github,主程序+配置文件)":"https://github.com/Carambola1437/mite_position_geter/releases/download/v0.1/config+main.7z",
+            "caramb坐标获取工具v0.1(国内,主程序单文件)":"https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.1/main.exe",
+            "caramb坐标获取工具v0.1(国内,主程序+配置文件)":"https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.1/ConfigAndMain.7z"
+        }
+
+    },
+
+
+
+
+
+
+
+
+
+
+    {
         "filename": "Hasee战神T6Ti-X7驱动",
         "remark": "神州战神笔记本T6Ti-X7驱动 #tool",
         "links": {
@@ -97,27 +131,6 @@
         }
 
     },
-    {
-        "filename": "mixly",
-        "remark": "mixly #code #tool",
-        "links": {
-            "官方git更新版(releases-Mixly_WIN1.0)": "https://gitee.com/mixlyplus/Mixly/releases/download/1.0/Mixly_WIN.7z",
-            "v2.0 win32-x64":"https://gitcode.com/Carambola1437/cmblogFile/releases/download/mixly/mixly2.0-win32-x64%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E7%89%88.7z",
-            "v3.0 win32-x64":"https://gitcode.com/Carambola1437/cmblogFile/releases/download/mixly/Mixly3.0-win32-x64%E4%B8%80%E9%94%AE%E6%9B%B4%E6%96%B0%E7%89%88.zip"
-
-        }
-
-    },
-
-
-
-
-
-
-
-
-
-
     {
         "filename": "HEU KMS Activator",
         "remark": "Windows/Office激活工具 #tool",
