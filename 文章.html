@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章 - Carambola1437'Blog</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="side-bar">
+        <div class="header">
+            <a href="index.html" class="logo">Carambola1437</a>
+            <div class="intro">技术文章与思考</div>
+        </div>
+        <div class="nav">
+            <a href="文章.html" class="item">文章</a>
+            <a href="工具.html" class="item">实用工具</a>
+            <a href="下载.html" class="item">软件下载</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="article-list" id="articleList">
+            <!-- 文章列表将通过JavaScript动态生成 -->
+            <div class="loading">加载中...</div>
+        </div>
+    </div>
+    
+    <!-- 加载必要的库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+    
+    <!-- 主逻辑 -->
+    <script>
+    // 文章数据
+    const articles = [
+        {
+            id: 'mite_get_pos',
+            title: 'mite坐标获取',
+            filename: 'mite坐标获取.md',
+            date: '2025-07-24',
+            summary: '获取我的世界mite的坐标'
+        },
+        // {
+        //     id: 'article2',
+        //     title: '第二篇文章',
+        //     filename: '第二篇文章.md',
+        //     date: '2025-07-17',
+        //     summary: '这篇文章分享了一些实用的前端开发技巧...'
+        // }
+    ];
+
+    // 加载文章列表
+    function loadArticleList() {
+        const articleList = document.getElementById('articleList');
+        
+        if (!articleList) {
+            console.error('找不到文章列表容器');
+            return;
+        }
+        
+        // 清空加载状态
+        articleList.innerHTML = '';
+        
+        // 检查是否有文章
+        if (articles.length === 0) {
+            articleList.innerHTML = '<div class="empty">暂无文章</div>';
+            return;
+        }
+        
+        // 创建文章列表
+        articles.forEach(article => {
+            const articleElement = document.createElement('div');
+            articleElement.className = 'article-item';
+            
+            articleElement.innerHTML = `
+                <a href="article.html?id=${article.id}" class="article-title">${article.title}</a>
+                <div class="article-meta">发布于：${article.date}</div>
+                <div class="article-summary">${article.summary}</div>
+            `;
+            
+            articleList.appendChild(articleElement);
+        });
+    }
+
+    // 页面加载完成后执行
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('正在加载文章列表...');
+        loadArticleList();
+    });
+    </script>
+</body>
+</html>

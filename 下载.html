@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>软件下载 - Carambola1437'Blog</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+</head>
+<body>
+    <div class="side-bar">
+        <div class="header">
+            <a href="index.html" class="logo">Carambola1437</a>
+            <div class="intro">实用软件资源下载</div>
+        </div>
+        <div class="nav">
+            <a href="文章.html" class="item">文章</a>
+            <a href="工具.html" class="item">实用工具</a>
+            <a href="下载.html" class="item active">软件下载</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="software-list" id="softwareList">
+            <!-- 软件列表将通过JS动态生成 -->
+            <div class="loading">加载中...</div>
+        </div>
+    </div>
+    <div class="main">
+        <!-- 添加搜索框 -->
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="搜索软件名称或描述...">
+        </div>
+        
+        <div class="software-list" id="softwareList">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>正在加载软件列表...</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/download.js"></script>
+
+    <!-- 下载选项弹窗模板 -->
+    <div id="downloadModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalTitle">下载选项</h3>
+            <div class="download-options" id="downloadOptions">
+                <!-- 下载选项将通过JS动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入必要的JS库 -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/download.js"></script>
+</body>
+</html>

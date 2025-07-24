@@ -1,86 +1,34 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carambola1437的博客</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+    <title>Carambola1437'Blog</title>
+    <link rel="icon" href="favicon.png" type="image/png">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
-
 <body>
-    <header>
-        <div class="header-content">
-            <div class="logo-avatar">
-                <img src="./avatar.jpg" alt="Carambola1437的头像" class="avatar" id="avatar">
-                <div class="logo">
-                    <a href="#">Carambola1437的博客</a>
+    <div class="side-bar">
+        <div class="header">
+            <a href="index.html" class="logo">Carambola1437</a>
+            <div class="intro">欢迎来到我的个人博客，分享技术、生活和思考</div>
+        </div>
+        <div class="nav">
+            <a href="文章.html" class="item">文章</a>
+            <a href="工具.html" class="item">实用工具</a>
+            <a href="下载.html" class="item">软件下载</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="article-list">
+            <div class="item">
+                <div class="title">欢迎来到我的博客</div>
+                <div class="status">建立于于：2025-07-18 | 作者：Carambola1437</div>
+                <div class="content">
+                    这是我的个人博客，我会在这里分享技术文章、实用工具和软件资源。感谢您的访问！
                 </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#" class="nav-link active" data-tab="articles">文章</a></li>
-                    <li><a href="#" class="nav-link" data-tab="downloads">程序下载</a></li>
-                </ul>
-            </nav>
-             <!-- 隐蔽的切换主题按钮 -->
-        <button id="theme-toggle" style="display: none;">切换主题</button>
-        </div>
-    </header>
-
-    <div class="container">
-        <div id="articles" class="tab-content active">
-            <div class="article-sidebar">
-                <input type="text" id="search-articles" placeholder="搜索文章..." />
-                <ul id="article-list">
-                    <!-- 文章列表通过 JavaScript 动态加载 -->
-                </ul>
-            </div>
-            <div class="markdown-body" id="article-content">
-                <div class="loader"></div>
-            </div>
-        </div>
-
-        <div id="downloads" class="tab-content">
-            <h2>软件下载</h2>
-            <p>以下软件程序可下载（Ctrl+F搜索）：</p>
-            <div class="download-list" id="download-list">
-                <div class="loader"></div>
-            </div>
         </div>
     </div>
-
-    <!-- 弹窗 -->
-    <div id="avatar-modal" class="modal">
-        <div class="modal-content">
-            <h3>选择跳转链接</h3>
-            <button onclick="window.open('https://github.com/Carambola1437', '_blank')">GitHub</button>
-            <button
-                onclick="window.open('https://carambola1437.fandom.com/zh/wiki/Carambola1437_Wiki', '_blank')">Fandom</button>
-            <button onclick="window.open('https://space.bilibili.com/3546372944955871', '_blank')">Bilibili</button>
-            <button
-                onclick="window.open('https://www.facebook.com/profile.php?id=61566452296554', '_blank')">Facebook</button>
-            <button onclick="window.open('https://www.youtube.com/@Carambola1437', '_blank')">YouTube</button>
-            <button onclick="window.open('https://qm.qq.com/q/fSvJMdZ1m0', '_blank')">QQ</button>
-            <button id="close-modal">取消</button>
-        </div>
-    </div>
-
-    <!-- 下载弹窗 -->
-    <div id="download-modal" class="modal">
-        <div class="modal-content">
-            <h3 id="download-title">选择下载</h3>
-            <div id="version-buttons">
-                <!-- 动态生成版本按钮 -->
-            </div>
-            <button id="close-download-modal">取消</button>
-        </div>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
-
 </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文章详情 - Carambola1437'Blog</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Markdown渲染样式 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@10.7.2/styles/github.min.css">
+    <style>
+        /* 覆盖黑色背景问题 */
+        #article-container {
+            background: white !important;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .markdown-body {
+            background: transparent !important;
+        }
+    </style>
+    <!-- 在<head>中添加按钮样式 -->
+<!-- <style>
+    /* 返回按钮样式 */
+    .back-button {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #4a5568;
+        color: rgba(255, 227, 227, 0.363) !important;
+        border-radius: 4px;
+        font-size: 14px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+        border: none;
+        cursor: pointer;
+        text-decoration: none !important;
+    }
+    
+    .back-button:hover {
+        background: #2d3748;
+        transform: translateY(-1px);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .back-button:active {
+        transform: translateY(0);
+    }
+</style> -->
+
+
+</head>
+<body>
+    <div class="side-bar">
+        <div class="header">
+            <a href="index.html" class="logo">Carambola1437</a>
+            <div class="intro">技术文章与思考</div>
+        </div>
+        <div class="nav">
+            <a href="文章.html" class="item">文章</a>
+            <a href="工具.html" class="item">实用工具</a>
+            <a href="下载.html" class="item">软件下载</a>
+        </div>
+    </div>
+    <div class="main">
+        <div id="article-container" class="markdown-body">
+            <div class="loading-state">
+                <p>正在加载文章内容...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 使用最新版库 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked@4.0.12/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.5.1/lib/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.6/dist/purify.min.js"></script>
+    
+    <script>
+    // 配置Marked.js
+    marked.setOptions({
+        highlight: function(code, lang) {
+            const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+            return hljs.highlight(code, { language }).value;
+        },
+        langPrefix: 'hljs language-',
+        breaks: true,
+        gfm: true
+    });
+
+    // 获取文章ID
+    const articleId = new URLSearchParams(window.location.search).get('id');
+    const articleMap = {
+        'mite_get_pos': 'mite坐标获取.md'
+    };
+
+    // 加载文章内容
+    async function loadArticle() {
+        try {
+            if (!articleId || !articleMap[articleId]) {
+                throw new Error('文章ID无效');
+            }
+
+            const filename = articleMap[articleId];
+            const response = await fetch(`articles/${filename}`);
+            
+            if (!response.ok) {
+                throw new Error(`加载失败: ${response.status} ${response.statusText}`);
+            }
+
+            const markdown = await response.text();
+            
+            if (!markdown.trim()) {
+                throw new Error('文章内容为空');
+            }
+
+            renderArticle(markdown);
+        } catch (error) {
+            showError(error.message);
+            console.error('加载错误:', error);
+        }
+    }
+
+    function renderArticle(markdown) {
+        const container = document.getElementById('article-container');
+        const html = DOMPurify.sanitize(marked.parse(markdown));
+        
+        container.innerHTML = `
+            <div class="article-header">
+                <a href="文章.html" class="back-button">返回文章列表</a>
+            </div>
+            <article class="article-content">
+                ${html}
+            </article>
+        `;
+        
+        // 高亮代码块
+        document.querySelectorAll('pre code').forEach(block => {
+            hljs.highlightElement(block);
+        });
+    }
+
+    // 显示错误
+    function showError(message) {
+        const container = document.getElementById('article-container');
+        container.innerHTML = `
+            <div class="error-message">
+                <h3>加载失败</h3>
+                <p>${message}</p>
+                <button onclick="window.location.href='文章.html'">返回列表</button>
+            </div>
+        `;
+    }
+
+    // 页面加载后执行
+    document.addEventListener('DOMContentLoaded', loadArticle);
+    </script>
+</body>
+</html>
