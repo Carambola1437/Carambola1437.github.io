@@ -27,9 +27,18 @@
   - 国内：
     - 主文件+配置文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.2/MitePositionGeter.7z)
 
+- **v0.3:**
+  - github：
+    - 仅主文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.3/main.exe)
+    - 仅配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.3/config.json)
+    - 主文件+配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.3/MitePositionGeter.7z)
+    - 源代码:https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.3.zip
+  - 国内：
+    - 主文件+配置文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.3/MitePositionGeter.7z)
+
 ## 月煮雪mite坐标获取
-- v1.4:https://yuezhuxue.github.io/mite/ga/dl/MITE%E5%9D%90%E6%A0%87%E8%8E%B7%E5%8F%96v1.4.zip
-- v1.0:https://yuezhuxue.github.io/mite/ga/dl/MITE%E5%9D%90%E6%A0%87%E8%8E%B7%E5%8F%96v1.0.zip
+- v1.4:https://yuezhuxue.github.io/mite/ga/dl/MITE坐标获取v1.4.zip
+- v1.0:https://yuezhuxue.github.io/mite/ga/dl/MITE坐标获取v1.0.zip
 
 
 
