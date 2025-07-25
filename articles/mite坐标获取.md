@@ -23,7 +23,7 @@
   - github：
     - 仅主文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.2/main.exe)
     - 主文件+配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.2/MitePositionGeter.7z)
-    - 源代码:https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.1.zip
+    - 源代码:https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.2.zip
   - 国内：
     - 主文件+配置文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.2/MitePositionGeter.7z)
 
