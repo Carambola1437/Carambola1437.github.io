@@ -8,13 +8,14 @@
 1. 程序**开源**，不担心藏有病毒，GNU许可证，允许修改。
 2. 可以自定义显示小数位数，最多可以精确到10位左右。
 3. bug少。
+github仓库:`https://github.com/Carambola1437/mite_position_geter`
 
 ## 下载
 - **v0.1:**
   - github：
     - 仅主文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.1/main.exe)
     - 主文件+配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.1/config+main.7z)
-    - 源代码:https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.1.zip
+    - 源代码:`https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.1.zip`
   - 国内：
     - 仅主文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.1/main.exe)
     - 主文件+配置文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.1/ConfigAndMain.7z)
@@ -23,7 +24,7 @@
   - github：
     - 仅主文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.2/main.exe)
     - 主文件+配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.2/MitePositionGeter.7z)
-    - 源代码:https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.2.zip
+    - 源代码:`https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.2.zip`
   - 国内：
     - 主文件+配置文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.2/MitePositionGeter.7z)
 
@@ -32,9 +33,17 @@
     - 仅主文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.3/main.exe)
     - 仅配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.3/config.json)
     - 主文件+配置文件：[下载](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.3/MitePositionGeter.7z)
-    - 源代码:https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.3.zip
+    - 源代码:`https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.3.zip`
   - 国内：
     - 主文件+配置文件：[下载](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.3/MitePositionGeter.7z)
+
+- **v0.5:**
+
+    #### [下载-github](https://github.com/Carambola1437/mite_position_geter/releases/download/v0.5/MPGr.exe)
+    
+    #### [下载-国内](https://gitcode.com/Carambola1437/MiteGetPos/releases/download/v0.5/MPGr.exe)
+    源代码:`https://github.com/Carambola1437/mite_position_geter/archive/refs/tags/v0.5.zip`
+
 
 ## 月煮雪mite坐标获取
 - v1.4:https://yuezhuxue.github.io/mite/ga/dl/MITE坐标获取v1.4.zip
