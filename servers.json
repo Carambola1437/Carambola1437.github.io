@@ -4,6 +4,10 @@
       "name": "Starbola Server",
       "address": "https://anisette-v3-server-ceba.onrender.com"
     },
+        {
+      "name": "StikStore",
+      "address": "https://ani.stikstore.app/"
+    },
     {
       "name": "SideStore",
       "address": "https://ani.sidestore.io"
