@@ -8,6 +8,14 @@
       "name": "StikStore",
       "address": "https://ani.stikstore.app"
     },
+            {
+      "name": "StikStore2",
+      "address": "https://ani2.stikstore.app"
+    },
+                {
+      "name": "StikStore3",
+      "address": "https://ani3.stikstore.app"
+    },
     {
       "name": "SideStore",
       "address": "https://ani.sidestore.io"
